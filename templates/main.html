@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h3>Calendar Tools:</h3>
+<div>
+  This is a very simple webservice API to work with calendr stuff like iCal.<br/>
+  You can use this API by posting to the next urls</br>
+  
+  <hr/>
+  <h4>Find ical file in the html of a website.</h4>
+  <b>Url:</b> http://calendar-tools.appspot.com/find-ical<br/>
+  <b>Method: </b> POST <br/>
+  <b>Variables: </b> url, the url of the html you want the api to parse.<br/>
+  <b>Answer: </b> a plaintext of the url of the ical file.<br/>
+  Example:<br/>
+  <form method="post" action="/find-ical">
+    <input type="text" name="url"/>
+    <input type="submit" value="Fetch" />
+  </form>
+  
+  <hr/>
+  <h4>Parse an ical file in a especific url.</h4>
+  <b>Url:</b> http://calendar-tools.appspot.com/parse-ical<br/>
+  <b>Method: </b> POST <br/>
+  <b>Variables: </b> url, the url of the ical file.<br/>
+  <b>Answer: </b> a xml representation of the ical file<br/>
+  Example:<br/>
+  <form method="post" action="/parse-ical">
+    <input type="text" name="url"/>
+    <input type="submit" value="Fetch" />
+  </form>
+  
+  <hr/>
+  <h4>Find and Parse an ical file in a especific url.</h4>
+  <b>Url:</b> http://calendar-tools.appspot.com/find-and-parse-ical<br/>
+  <b>Method: </b> POST <br/>
+  <b>Variables: </b> url, the url of the html you want the api to parse.<br/>
+  <b>Answer: </b> a xml representation of the ical file found in the file<br/>
+  Example:<br/>
+  <form method="post" action="/find-and-parse-ical">
+    <input type="text" name="url"/>
+    <input type="submit" value="Fetch" />
+  </form>
+</div>
+<div id="result"></div>
+ 
+<script type="text/javascript">
+</script>
+{% endblock %}
