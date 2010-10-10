@@ -1,0 +1,8 @@
+This is a very simple webservice API to work with calendr stuff like iCal.
+The first 2 things it will contain are
+POST /find-ical 
+ -d "url=http..."
+/parse-ical
+ -d "url=http..."
+/find-and-parse-ical
+ -d "url=http..."
